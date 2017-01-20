@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include template/header.ejs %>
+    <h1><%= videodata.categoryName %></h1>
+    <p>Welcome to <%= title %></p>
+    <ul>
+        <% videodata.categories.forEach(function(item){ %>
+           <li><a href="/about?catId=<%= item.categoryID %>"><%= item.categoryName %></a></li>
+        <% }); %>
+    </ul>
+  </body>
+</html>
